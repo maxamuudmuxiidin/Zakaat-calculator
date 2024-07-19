@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import Income from './components/Income';
 import Investments from './components/Investments';
@@ -29,12 +29,12 @@ function App() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   // Validate if any of the required fields are filled
-  const validateFields = () => {
+  const validateFields = useCallback(() => {
     const isIncomeFilled = monthlySalary || otherIncome;
     const isSavingsFilled = bankSavings || cashOnHand || gold || silver;
     const isInvestmentsFilled = stocks || properties;
     return isIncomeFilled || isSavingsFilled || isInvestmentsFilled;
-  };
+  }, [monthlySalary, otherIncome, bankSavings, cashOnHand, gold, silver, stocks, properties]);
 
   // Effect hook to enable/disable the calculate button based on validation
   useEffect(() => {
