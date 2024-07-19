@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Income from './components/Income';
 import Investments from './components/Investments';
+import Liabilities from './components/Liabilities';
+import ZakatResult from './components/ZakatResult';
+import Savings from './components/Savings';
 
 
 // Assume the value of 85 grams of gold is approximately $5000 (this value should be updated based on current gold prices)
