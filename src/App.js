@@ -39,7 +39,7 @@ function App() {
   // Effect hook to enable/disable the calculate button based on validation
   useEffect(() => {
     setIsButtonDisabled(!validateFields());
-  }, [monthlySalary, otherIncome, bankSavings, cashOnHand, gold, silver, stocks, properties]);
+  }, [monthlySalary, otherIncome, bankSavings, cashOnHand, gold, silver, stocks, properties, validateFields]);
 
   // Function to calculate Zakat
   const calculateZakat = () => {
