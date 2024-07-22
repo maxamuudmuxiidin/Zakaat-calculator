@@ -2,40 +2,38 @@ import React from 'react';
 
 const Savings = ({ bankSavings, setBankSavings, cashOnHand, setCashOnHand, gold, setGold, silver, setSilver }) => {
   return (
-    <div className="mb-4">
-      <h2 className="text-xl font-semibold">Savings:</h2>
-      <label className="block mb-2">Bank Savings</label>
-      <input
-        type="number"
-        value={bankSavings}
-        onChange={(e) => setBankSavings(e.target.value)}
-        className="w-full p-2 border rounded mb-4 no-arrows"
-        placeholder="Optional"
-      />
-      <label className="block mb-2">Cash on Hand</label>
-      <input
-        type="number"
-        value={cashOnHand}
-        onChange={(e) => setCashOnHand(e.target.value)}
-        className="w-full p-2 border rounded mb-4 no-arrows"
-        placeholder="Optional"
-      />
-      <label className="block mb-2">Gold</label>
-      <input
-        type="number"
-        value={gold}
-        onChange={(e) => setGold(e.target.value)}
-        className="w-full p-2 border rounded mb-4 no-arrows"
-        placeholder="Optional"
-      />
-      <label className="block mb-2">Silver</label>
-      <input
-        type="number"
-        value={silver}
-        onChange={(e) => setSilver(e.target.value)}
-        className="w-full p-2 border rounded no-arrows"
-        placeholder="Optional"
-      />
+    <div className="mb-6">
+      <h2 className="text-2xl font-bold mb-4">Savings</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="number"
+          placeholder="Bank Savings"
+          value={bankSavings}
+          onChange={(e) => setBankSavings(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+        <input
+          type="number"
+          placeholder="Cash on Hand"
+          value={cashOnHand}
+          onChange={(e) => setCashOnHand(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+        <input
+          type="number"
+          placeholder="Gold"
+          value={gold}
+          onChange={(e) => setGold(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+        <input
+          type="number"
+          placeholder="Silver"
+          value={silver}
+          onChange={(e) => setSilver(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+      </div>
     </div>
   );
 };

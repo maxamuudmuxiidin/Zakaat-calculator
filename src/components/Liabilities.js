@@ -2,24 +2,24 @@ import React from 'react';
 
 const Liabilities = ({ debts, setDebts, loans, setLoans }) => {
   return (
-    <div className="mb-4">
-      <h2 className="text-xl font-semibold">Liabilities:</h2>
-      <label className="block mb-2">Debts</label>
-      <input
-        type="number"
-        value={debts}
-        onChange={(e) => setDebts(e.target.value)}
-        className="w-full p-2 border rounded mb-4 no-arrows"
-        placeholder="Optional"
-      />
-      <label className="block mb-2">Loans</label>
-      <input
-        type="number"
-        value={loans}
-        onChange={(e) => setLoans(e.target.value)}
-        className="w-full p-2 border rounded mb-4 no-arrows"
-        placeholder="Optional"
-      />
+    <div className="mb-6">
+      <h2 className="text-2xl font-bold mb-4">Liabilities</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="number"
+          placeholder="Debts"
+          value={debts}
+          onChange={(e) => setDebts(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+        <input
+          type="number"
+          placeholder="Loans"
+          value={loans}
+          onChange={(e) => setLoans(e.target.value)}
+          className="border p-2 rounded w-full"
+        />
+      </div>
     </div>
   );
 };
